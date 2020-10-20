@@ -20,10 +20,6 @@ jobs:
       with: 
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
-        repository: username/repository
+        repository: ${{ secrets.username }}/gohellobuild
         tag_with_sha: true
 
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag libaibai/gohellobuild
-    - name: Push the Docker image
-      run: docker push . --tag libaibai/gohellobuild
