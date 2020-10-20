@@ -22,7 +22,7 @@ jobs:
         password: ${{ secrets.password }}
         repository: username/repository
         tag_with_sha: true
-        path: 'docker'
+        path: ''
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag libaibai/gohellobuild
